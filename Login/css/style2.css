@@ -16,7 +16,7 @@ body{
     background-color:rgb(37, 36, 41);
     border-radius:15px;
     border: none;
-    width: 300px;
+    width: 280px;
 }
 .fieldset .title{
     font-size: larger;
@@ -47,7 +47,7 @@ body{
     cursor: pointer;
 }
 
-.inputRegister.error input{
+.fieldset .inputRegister.error input{
     border-color: crimson;
 }
 .inputRegister.error a{

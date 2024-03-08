@@ -1,7 +1,7 @@
 const fieldset =  document.getElementById("fieldset");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
-const confemail = document.getElementById("confirm-email");
+const confirmEmail = document.getElementById("confirmEmail");
 const senha = document.getElementById("senha");
 const confsenha = document.getElementById("confsenha");
 
@@ -10,7 +10,7 @@ fieldset.addEventListener("submit", (event) =>{
 
     checkInputnome();
     checkInputemail();
-    checkConfirmEmail();
+    checkConfirmEmail(email);
     checkInputsenha();
 })
 
@@ -22,7 +22,7 @@ function checkInputnome(){
     }
     else{
         const formItem = nome.parentElement;
-        formItem.className = "inputRegister"
+        formItem.className = "inputRegister";
     }
 
     console.log(nomevalue);
@@ -35,25 +35,27 @@ function checkInputemail(){
     }
     else{
         const formItem = email.parentElement;
-        formItem.className = "inputRegister"
+        formItem.className = "inputRegister";
     }
 
     console.log(emailvalue);
 }
-function checkConfirmEmail(){
-    const confEmailvalue = confemail.value;
+function checkConfirmEmail(email){
+    const confEmailvalue = confirmEmail.value;
+    const emailvalue = email.value;
+
     if(confEmailvalue === ""){
-        errorInput(confEmailvalue, "Confirme o seu email!");
+        errorInput(confirmEmail,"Confirme o seu email!");
     }
     else if(confEmailvalue != emailvalue){
-        errorInput(confEmailvalue,"Email está incorreto");
+        errorInput(confirmEmail,"Email está incorreto");
     }
     else{
-        const formItem = confemail.parentElement;
-        formItem.className = "inputRegister"
+        const formItem = confirmEmail.parentElement;
+        formItem.className = "inputRegister";
     }
 
-    console.log(confiemail);
+    console.log(confEmailvalue);
 }
 
 function checkInputsenha(){
