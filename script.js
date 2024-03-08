@@ -31,7 +31,7 @@ function checkInputnome(){
 function checkInputemail(){
     const emailvalue = email.value;
     if(emailvalue === ""){
-        errorInput(email,"Preencha seu email!");
+        errorInput(email,"Insira o seu email!");
     }
     else{
         const formItem = email.parentElement;
@@ -43,17 +43,17 @@ function checkInputemail(){
 function checkConfirmEmail(){
     const confEmailvalue = confemail.value;
     if(confEmailvalue === ""){
-        errorInput(confEmailvalue, "Confirme o seu email!");
+        errorInput(confemail, "Insira o seu email de confirmação!");
     }
     else if(confEmailvalue != emailvalue){
-        errorInput(confEmailvalue,"Email está incorreto");
+        errorInput(confemail,"Email está incorreto");
     }
     else{
         const formItem = confemail.parentElement;
         formItem.className = "inputRegister"
     }
 
-    console.log(confiemail);
+    console.log(confEmailvalue);
 }
 
 function checkInputsenha(){
