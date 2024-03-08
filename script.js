@@ -59,9 +59,9 @@ function checkConfirmEmail(){
 function checkInputsenha(){
     const senhavalue = senha.value;
     if(senhavalue === ""){
-        errorInput(senhavalue,"Digite uma senha");
+        errorInput(senha,"Digite uma senha!");
     }else if(senhavalue.length < 8){
-        errorInput(senhavalue,"caracteres insuficiente!");
+        errorInput(senha,"Caracteres insuficiente!");
     }
     else{
         const formItem = senha.parentElement;
@@ -69,6 +69,21 @@ function checkInputsenha(){
     }
 
     console.log(senhavalue);
+}
+function checkConfirmSenha(){
+    const confirmSenha = confsenha.value;
+    if(confirmSenha === ""){
+        errorInput(confsenha,"Digite a senha de confirmação!");
+    }
+    else if(confirmSenha != senhavalue){
+        errorInput(confsenha,"A senha está incorreta");
+    }
+    else{
+        const formItem = confsenha.parentElement;
+        formItem.className = "inputRegister";
+    }
+
+    console.log(confirmSenha);
 }
 
 function errorInput(input, message){
