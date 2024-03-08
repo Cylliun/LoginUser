@@ -1,0 +1,59 @@
+body {
+    font-size: 16px;
+    padding: 40%;
+    margin: 0%;
+    background-color: aquamarine;
+    color:white;
+    font-family: helvetica;
+    overflow: hidden;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.fieldset {
+    background-color: rgb(37, 36, 41);
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+}
+
+.fieldset .title {
+    text-align: center;
+    font-size: larger;
+}
+
+.fieldset .inputLogin {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    border: 10px;
+    text-align: justify;
+}
+.fieldset .inputLogin input{
+    width: 300px;
+}
+
+.fieldset .senhalink {
+    font-size: 14px;
+    text-transform: lowercase;
+    text-align: justify;
+    text-decoration: rgb(32, 18, 218);
+}
+
+.fieldset #btn {
+    width: 100%;
+    height: 45px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.fieldset #registrolink {
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: lowercase;
+    text-decoration: rgb(27, 18, 153);
+}
