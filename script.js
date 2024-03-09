@@ -3,7 +3,7 @@ const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const confemail = document.getElementById("confirm-email");
 const senha = document.getElementById("senha");
-const confsenha = document.getElementById("confsenha");
+const confsenha = document.getElementById("confirm-senha");
 
 fieldset.addEventListener("submit", (event) =>{
     event.preventDefault();
@@ -12,6 +12,7 @@ fieldset.addEventListener("submit", (event) =>{
     checkInputemail();
     checkConfirmEmail();
     checkInputsenha();
+    checkConfirmSenha();
 })
 
 function checkInputnome(){
@@ -75,8 +76,11 @@ function checkConfirmSenha(){
     if(confirmSenha === ""){
         errorInput(confsenha,"Digite a senha de confirmação!");
     }
+        else if(confirmSenha.length < 8){
+            errorInput(confsenha, "Caracteres insuficiente!");
+        }
     else if(confirmSenha != senhavalue){
-        errorInput(confsenha,"A senha está incorreta");
+        errorInput(confsenha,"A senha de confirmação está incorreta!");
     }
     else{
         const formItem = confsenha.parentElement;
